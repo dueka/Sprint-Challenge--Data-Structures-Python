@@ -29,6 +29,9 @@ class RingBuffer:
         else:
             node = self.current.next
 
+        if node is not self.current:
+            list_buffer_contents.append(node)
+            node = node.next
         return list_buffer_contents
 
 # ----------------Stretch Goal-------------------
